@@ -1,0 +1,63 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+}
+
+.navbar a {
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.grid h1 {
+  color: green;
+}
+
+.book-card {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.card {
+  padding: 2em;
+}
+h1 {
+  font-size: 2.5rem;
+  color: red;
+}
+nav {
+  background-color: #333;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+nav h1 {
+  color: blue;
+  margin: 0;
+}
+.search-bar {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.search-bar input {
+  padding: 0.5rem;
+  width: 50%;
+  max-width: 400px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 0 9px;
+}
+
