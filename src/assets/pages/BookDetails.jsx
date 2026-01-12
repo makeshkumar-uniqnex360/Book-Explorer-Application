@@ -8,13 +8,16 @@ function BookDetails() {
 
     useEffect(() => {
       axios 
-        .get(`https>//openlibrary.org/search.json?title=${id}`)
+        .get(`https://openlibrary.org/search.json?title=${id}`)
         .then((res)=> setBook(res.data));
+        console.log("setbook",setBook);
     }, [id]);
-
+  
     if (!book) return <p>Loading...</p>;
 
     const info = book.volumeInfo;
+   
+    // console.log("book details info",);
 
     return (
         <div className="book-details">

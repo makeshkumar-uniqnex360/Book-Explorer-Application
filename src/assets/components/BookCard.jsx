@@ -4,7 +4,7 @@ function BookCard({ book }) {
     // const info = book.volumeInfo;
     const info = book;
     // console.log("book in card",book?.title);
-    console.log("info in card",info?.author_name);
+    // console.log("info in card",info?.author_name); woring
     // console.log("title",info?.title);
 
     const addToFavorites = () => {
@@ -24,8 +24,10 @@ function BookCard({ book }) {
         <div className="book-card">
            <Link to={`/book/${book.id}`}>
             <h2>{info?.title}</h2>
+            <p>{info?.author_name ? info.author_name.join(", ") : "Unknown Author"}</p>
+            {/* <button onClick={addToFavorites}>Add to Favorites</button> */}
             </Link>
-            <p>{info.authors ? info.authors.join(", ") : "Unknown Author"}</p>
+            {/* <p>{info?.authors ? info.authors.join(", ") : "Unknown Author"}</p> */}
             <button onClick={addToFavorites}>Add to Favorites</button>
         </div>
     );

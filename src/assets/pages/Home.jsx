@@ -9,7 +9,7 @@ function Home() {
     const handleSearch = async (query) => {
         const res = await searchBooks(query);
         console.log("hiii",res.data);
-        // console.log("ebook_access",res.data.docs[1].ebook_access);
+        console.log("ebook_access",res.data.docs[1].ebook_access);
         setBooks(res.data.docs || []);
 
     };

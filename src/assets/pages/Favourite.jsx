@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect,useState } from "react";
 import BookCard from "../components/BookCard";
 
 function Favourite() {
-    const [favorites, setFavorites] = useState([]);
-    useEffect(() => {
-        try{
+   
+     const [favorites, setFavorites] = useState([]);
+      
+     useEffect(() => {
         const stored = JSON.parse(localStorage.getItem("favorites")) || [];
         setFavorites(stored);
-        }catch(e){
-            console.error("Failed to parse favorites from localStorage", e);
-            setFavorites([]);
-        }   
-    },[]);
-    //  const [favorites, setFavorites] = useState(() => {
-    //     return JSON.parse(localStorage.getItem("favorites")) || [];
-    // });
+     }, []);
+     console.log("favorites",favorites);
+
+   
     return (
         <div>
             <h2>Favorites Books</h2>
@@ -30,3 +27,9 @@ function Favourite() {
 }
 
 export default Favourite;
+
+
+
+    //     const stored = JSON.parse(localStorage.getItem("favorites"));
+    //     setFavorites(stored);
+    //     return stored || [];
